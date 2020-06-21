@@ -1,0 +1,32 @@
+What will it be?
+================
+
+Walks varying in difficulty and length with a good description and map to 
+follow.
+
+Some local info/history about the route.
+
+The map should have numbered locations that refer to numbered locations on the
+description so that it's difficult to go wrong.
+
+Walks will be graded 1 to 5 and marked for wheelchair access if appropriate.
+
+- Printable maps and directions.
+- Links to local places to eat and stay.
+- Links to local information centers.
+- Locations of toilets etc.
+
+Walk pages are generated in the dom (add the id 'walk-info');
+
+Format of Walks - page layout
+
+- Intro
+- Small map
+- Description
+- Amenities
+
+Landing page
+
+menu-bar fixed at top
+    Logo - The Walks - About Us
+
