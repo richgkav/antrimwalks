@@ -6,9 +6,9 @@
 :root {
     --col-palegreen: #8FCB9B;
     --col-seagreen: #087E8B;
-    --col-skyblue: #5998C5;
+    --col-mauve: #E2C2FF;
     --col-purple: #37123C;
-    --col-orange: #E36414;
+    --col-yellow: #F9C80E;
 }
 
 body {
@@ -19,7 +19,6 @@ body {
 #top-bar {
     color: var(--col-purple);
     background-color: var(--col-palegreen);
-    height: 80px;
     width: 100%;
     position: fixed;
     top: 0;
@@ -32,16 +31,21 @@ body {
     flex-direction: row;
     justify-content: flex-end;
     margin-right: 30px;
+    height: 80px;
+    line-height: 80px;
 }
 
 .menu-item {
-    background-color: var(--col-skyblue);
+    background-color: var(--col-mauve);
     font-size: large;
-    margin: 0 10px 0 10px;
-    padding: 20px;
+    height: 50px;
+    line-height: 50px;
+    margin: auto 10px;
+    padding: 0 20px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 11px 0px rgba(0,0,0,0.75);
 }
 
 #logo {
     background-color: var(--col-skyblue);
-    margin-left: 30px;
 }
