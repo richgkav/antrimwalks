@@ -1,4 +1,5 @@
 import "./index.css";
+import imageBack from './images/whitepark-bay.jpg';
 
 function main() {
     const menu = document.getElementById('menu');

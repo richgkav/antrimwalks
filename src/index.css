@@ -1,3 +1,5 @@
+import imageBack from './images/whitepark-bay.jpg';
+
 * {
     margin: 0;
     padding: 0;
@@ -48,4 +50,8 @@ body {
 
 #logo {
     background-color: var(--col-skyblue);
+}
+
+#content {
+    /*background-image: url(images/whitepark-bay.jpg);*/
 }
