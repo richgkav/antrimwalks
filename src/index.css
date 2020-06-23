@@ -21,11 +21,15 @@ body {
     background-color: var(--col-seagreen);
     width: 100%;
     position: fixed;
-    top: 0;
+    top: 15px;
     display: grid;
     grid-template-columns: 300px 1fr;
     border-bottom: solid;
-    border-bottom-color: var(--col-purple);
+    border-top: solid;
+    border-color: var(--col-purple);
+    border-width: 2px;
+    opacity: 80%;
+    z-index: -50;
 }
 
 #menu, #logo {
@@ -44,10 +48,13 @@ body {
 
 .items-design {
     font-size: large;
+    font-weight: bold;
+    font-variant: small-caps;
     height: 50px;
     line-height: 50px;
     margin: auto 10px;
     padding: 0 20px;
+    border-style: solid;
     border-radius: 5px;
     box-shadow: 0px 3px 11px 0px rgba(0,0,0,0.75);
 }
@@ -63,6 +70,10 @@ body {
 
 .logo-item   {
     background-color: var(--col-palegreen);
+    position: absolute;
+    top: -10px;
+    height: 100px;
+    border-radius: 0 0 15px 15px;
 }
 
 #logo {
@@ -78,11 +89,13 @@ body {
     top: 26vh;
     margin: 0 auto;
     width: 80%;
-    /*border-style: solid;*/
     text-align: center;
-    /*font-size: 4vw;*/
     font-size: calc(20px + 3vw);
+    font-weight: bold;
+    font-variant: small-caps;
     line-height: 140%;
+    text-shadow: 2px 2px 0px #FFFFFF;
+    color: var(--col-purple);
 }
 
 #background {
@@ -93,5 +106,9 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
-    z-index: -10;;
+    z-index: -100;;
+}
+
+#walks-content {
+    height: 100vh;
 }
