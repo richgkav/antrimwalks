@@ -91,9 +91,33 @@
   !*** ./node_modules/css-loader/dist/cjs.js!./src/index.css ***!
   \*************************************************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-eval("throw new Error(\"Module build failed (from ./node_modules/css-loader/dist/cjs.js):\\nCssSyntaxError\\n\\n(1:1) Unknown word\\n\\n\\u001b[31m\\u001b[1m>\\u001b[22m\\u001b[39m\\u001b[90m 1 | \\u001b[39mimport imageBack from \\u001b[32m'./images/whitepark-bay.jpg'\\u001b[39m\\u001b[33m;\\u001b[39m\\n \\u001b[90m   | \\u001b[39m\\u001b[31m\\u001b[1m^\\u001b[22m\\u001b[39m\\n \\u001b[90m 2 | \\u001b[39m\\n \\u001b[90m 3 | \\u001b[39m* \\u001b[33m{\\u001b[39m\\n\");\n\n//# sourceURL=webpack:///./src/index.css?./node_modules/css-loader/dist/cjs.js");
+eval("// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\nvar ___CSS_LOADER_GET_URL_IMPORT___ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/getUrl.js */ \"./node_modules/css-loader/dist/runtime/getUrl.js\");\nvar ___CSS_LOADER_URL_IMPORT_0___ = __webpack_require__(/*! ./images/whitepark-bay.jpg */ \"./src/images/whitepark-bay.jpg\");\nexports = ___CSS_LOADER_API_IMPORT___(false);\nvar ___CSS_LOADER_URL_REPLACEMENT_0___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_IMPORT_0___);\n// Module\nexports.push([module.i, \"* {\\r\\n    margin: 0;\\r\\n    padding: 0;\\r\\n}\\r\\n\\r\\n:root {\\r\\n    --col-palegreen: #8FCB9B;\\r\\n    --col-seagreen: #087E8B;\\r\\n    --col-mauve: #E2C2FF;\\r\\n    --col-purple: #37123C;\\r\\n    --col-yellow: #F9C80E;\\r\\n}\\r\\n\\r\\nbody {\\r\\n    font-family: 'Trebuchet MS', Arial, sans-serif;\\r\\n    width: 100%;\\r\\n}\\r\\n\\r\\n#top-bar {\\r\\n    color: var(--col-purple);\\r\\n    background-color: var(--col-palegreen);\\r\\n    width: 100%;\\r\\n    position: fixed;\\r\\n    top: 0;\\r\\n    display: grid;\\r\\n    grid-template-columns: 200px 1fr;\\r\\n}\\r\\n\\r\\n#menu {\\r\\n    display: flex;\\r\\n    flex-direction: row;\\r\\n    justify-content: flex-end;\\r\\n    margin-right: 30px;\\r\\n    height: 80px;\\r\\n    line-height: 80px;\\r\\n}\\r\\n\\r\\n.menu-item {\\r\\n    background-color: var(--col-mauve);\\r\\n    font-size: large;\\r\\n    height: 50px;\\r\\n    line-height: 50px;\\r\\n    margin: auto 10px;\\r\\n    padding: 0 20px;\\r\\n    border-radius: 10px;\\r\\n    box-shadow: 0px 3px 11px 0px rgba(0,0,0,0.75);\\r\\n}\\r\\n\\r\\n#logo {\\r\\n    background-color: var(--col-skyblue);\\r\\n}\\r\\n\\r\\n#content {\\r\\n\\r\\n}\\r\\n\\r\\n#background {\\r\\n    width: 100%;\\r\\n    height: 1080px;\\r\\n    background-image: url(\" + ___CSS_LOADER_URL_REPLACEMENT_0___ + \");\\r\\n    background-size: contain;\\r\\n    background-repeat: no-repeat;\\r\\n    background-position: center;\\r\\n    position: relative;\\r\\n    z-index: -10;;\\r\\n}\\r\\n\", \"\"]);\n// Exports\nmodule.exports = exports;\n\n\n//# sourceURL=webpack:///./src/index.css?./node_modules/css-loader/dist/cjs.js");
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/runtime/api.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/css-loader/dist/runtime/api.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\n/*\n  MIT License http://www.opensource.org/licenses/mit-license.php\n  Author Tobias Koppers @sokra\n*/\n// css base code, injected by the css-loader\n// eslint-disable-next-line func-names\nmodule.exports = function (useSourceMap) {\n  var list = []; // return the list of modules as css string\n\n  list.toString = function toString() {\n    return this.map(function (item) {\n      var content = cssWithMappingToString(item, useSourceMap);\n\n      if (item[2]) {\n        return \"@media \".concat(item[2], \" {\").concat(content, \"}\");\n      }\n\n      return content;\n    }).join('');\n  }; // import a list of modules into the list\n  // eslint-disable-next-line func-names\n\n\n  list.i = function (modules, mediaQuery, dedupe) {\n    if (typeof modules === 'string') {\n      // eslint-disable-next-line no-param-reassign\n      modules = [[null, modules, '']];\n    }\n\n    var alreadyImportedModules = {};\n\n    if (dedupe) {\n      for (var i = 0; i < this.length; i++) {\n        // eslint-disable-next-line prefer-destructuring\n        var id = this[i][0];\n\n        if (id != null) {\n          alreadyImportedModules[id] = true;\n        }\n      }\n    }\n\n    for (var _i = 0; _i < modules.length; _i++) {\n      var item = [].concat(modules[_i]);\n\n      if (dedupe && alreadyImportedModules[item[0]]) {\n        // eslint-disable-next-line no-continue\n        continue;\n      }\n\n      if (mediaQuery) {\n        if (!item[2]) {\n          item[2] = mediaQuery;\n        } else {\n          item[2] = \"\".concat(mediaQuery, \" and \").concat(item[2]);\n        }\n      }\n\n      list.push(item);\n    }\n  };\n\n  return list;\n};\n\nfunction cssWithMappingToString(item, useSourceMap) {\n  var content = item[1] || ''; // eslint-disable-next-line prefer-destructuring\n\n  var cssMapping = item[3];\n\n  if (!cssMapping) {\n    return content;\n  }\n\n  if (useSourceMap && typeof btoa === 'function') {\n    var sourceMapping = toComment(cssMapping);\n    var sourceURLs = cssMapping.sources.map(function (source) {\n      return \"/*# sourceURL=\".concat(cssMapping.sourceRoot || '').concat(source, \" */\");\n    });\n    return [content].concat(sourceURLs).concat([sourceMapping]).join('\\n');\n  }\n\n  return [content].join('\\n');\n} // Adapted from convert-source-map (MIT)\n\n\nfunction toComment(sourceMap) {\n  // eslint-disable-next-line no-undef\n  var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));\n  var data = \"sourceMappingURL=data:application/json;charset=utf-8;base64,\".concat(base64);\n  return \"/*# \".concat(data, \" */\");\n}\n\n//# sourceURL=webpack:///./node_modules/css-loader/dist/runtime/api.js?");
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/runtime/getUrl.js":
+/*!********************************************************!*\
+  !*** ./node_modules/css-loader/dist/runtime/getUrl.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nmodule.exports = function (url, options) {\n  if (!options) {\n    // eslint-disable-next-line no-param-reassign\n    options = {};\n  } // eslint-disable-next-line no-underscore-dangle, no-param-reassign\n\n\n  url = url && url.__esModule ? url.default : url;\n\n  if (typeof url !== 'string') {\n    return url;\n  } // If url is already wrapped in quotes, remove them\n\n\n  if (/^['\"].*['\"]$/.test(url)) {\n    // eslint-disable-next-line no-param-reassign\n    url = url.slice(1, -1);\n  }\n\n  if (options.hash) {\n    // eslint-disable-next-line no-param-reassign\n    url += options.hash;\n  } // Should url be wrapped?\n  // See https://drafts.csswg.org/css-values-3/#urls\n\n\n  if (/[\"'() \\t\\n]/.test(url) || options.needQuotes) {\n    return \"\\\"\".concat(url.replace(/\"/g, '\\\\\"').replace(/\\n/g, '\\\\n'), \"\\\"\");\n  }\n\n  return url;\n};\n\n//# sourceURL=webpack:///./node_modules/css-loader/dist/runtime/getUrl.js?");
 
 /***/ }),
 
@@ -113,10 +137,11 @@ eval("\n\nvar isOldIE = function isOldIE() {\n  var memo;\n  return function mem
 /*!**************************************!*\
   !*** ./src/images/whitepark-bay.jpg ***!
   \**************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("throw new Error(\"Module parse failed: Unexpected character '�' (1:0)\\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\\n(Source code omitted for this binary file)\");\n\n//# sourceURL=webpack:///./src/images/whitepark-bay.jpg?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"c9051d66da78bdc74eef18823cc376df.jpg\");\n\n//# sourceURL=webpack:///./src/images/whitepark-bay.jpg?");
 
 /***/ }),
 
@@ -139,7 +164,7 @@ eval("var api = __webpack_require__(/*! ../node_modules/style-loader/dist/runtim
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.css */ \"./src/index.css\");\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_index_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _images_whitepark_bay_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./images/whitepark-bay.jpg */ \"./src/images/whitepark-bay.jpg\");\n/* harmony import */ var _images_whitepark_bay_jpg__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_images_whitepark_bay_jpg__WEBPACK_IMPORTED_MODULE_1__);\n\n\n\nfunction main() {\n    const menu = document.getElementById('menu');\n    menu.append(newDiv(null, 'menu-item', 'Walks'));\n    menu.append(newDiv(null, 'menu-item', 'About Us'));\n}\n\nconst newDiv = function _newDiv(idName, className, innerHTML) {\n    const newDiv = document.createElement('div');\n    if (idName) newDiv.id = idName;\n    if (className) newDiv.classList.add(className);\n    if (innerHTML) newDiv.innerHTML = innerHTML;\n    return newDiv;\n}\n\nwindow.onload = main;\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.css */ \"./src/index.css\");\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_index_css__WEBPACK_IMPORTED_MODULE_0__);\n\r\n//import imageBack from './images/whitepark-bay.jpg';\r\n\r\nfunction main() {\r\n    const menu = document.getElementById('menu');\r\n    menu.append(newDiv(null, 'menu-item', 'Walks'));\r\n    menu.append(newDiv(null, 'menu-item', 'About Us'));\r\n}\r\n\r\nconst newDiv = function _newDiv(idName, className, innerHTML) {\r\n    const newDiv = document.createElement('div');\r\n    if (idName) newDiv.id = idName;\r\n    if (className) newDiv.classList.add(className);\r\n    if (innerHTML) newDiv.innerHTML = innerHTML;\r\n    return newDiv;\r\n}\r\n\r\nwindow.onload = main;\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ })
 
