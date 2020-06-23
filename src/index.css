@@ -18,15 +18,17 @@ body {
 
 #top-bar {
     color: var(--col-purple);
-    background-color: var(--col-palegreen);
+    background-color: var(--col-seagreen);
     width: 100%;
     position: fixed;
     top: 0;
     display: grid;
-    grid-template-columns: 200px 1fr;
+    grid-template-columns: 300px 1fr;
+    border-bottom: solid;
+    border-bottom-color: var(--col-purple);
 }
 
-#menu {
+#menu, #logo {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -35,15 +37,32 @@ body {
     line-height: 80px;
 }
 
-.menu-item {
-    background-color: var(--col-mauve);
+#logo {
+    margin-left: 30px;
+    justify-content: flex-start;
+}
+
+.items-design {
     font-size: large;
     height: 50px;
     line-height: 50px;
     margin: auto 10px;
     padding: 0 20px;
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow: 0px 3px 11px 0px rgba(0,0,0,0.75);
+}
+
+.menu-item {
+    background-color: var(--col-mauve);
+}
+
+.menu-item:hover {
+    box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.75);
+    transform: scale(0.95);
+}
+
+.logo-item   {
+    background-color: var(--col-palegreen);
 }
 
 #logo {
@@ -54,11 +73,23 @@ body {
 
 }
 
+#banner {
+    position: relative;
+    top: 26vh;
+    margin: 0 auto;
+    width: 80%;
+    /*border-style: solid;*/
+    text-align: center;
+    /*font-size: 4vw;*/
+    font-size: calc(20px + 3vw);
+    line-height: 140%;
+}
+
 #background {
     width: 100%;
     height: 1080px;
     background-image: url(images/whitepark-bay.jpg);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
