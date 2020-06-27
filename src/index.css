@@ -55,19 +55,27 @@ a {
     text-decoration: none;
     outline: none;
 }
-
+/*
 a:link {
     text-decoration: none;
+    outline: none;
 }
 
 a:visited {
     text-decoration: none;
+    outline: none;
 }
 
 a:active {
     text-decoration: none;
+    outline: none;
 }
 
+a:focus {
+    text-decoration: none;
+    outline: none;  
+}
+*/
 ul {
     list-style-type: none;
 }
@@ -82,6 +90,8 @@ ul {
     padding: 0 20px;
     border-style: solid;
     border-radius: 5px;
+    border-color: var(--col-purple);
+    color: var(--col-purple);
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
 }
 
