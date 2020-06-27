@@ -125,15 +125,16 @@ ul {
 
 #banner {
     position: absolute;
-    top: calc(100px + 20vh);
+    /*top: calc(100px + 20vh);*/
+    top: 32vh;
     margin: 0 auto;
     width: 80%;
     text-align: center;
-    font-size: calc(20px + 3vw);
+    font-size: calc(4em + 1vw);
     font-weight: bold;
     font-variant: small-caps;
     line-height: 140%;
-    text-shadow: 3px 3px 0px rgba(1, 1, 1, 1);
+    text-shadow: 4px 4px 0px rgba(1, 1, 1, 1);
     color: white;
 }
 
