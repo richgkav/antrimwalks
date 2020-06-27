@@ -16,29 +16,6 @@ body {
     width: 100%;
 }
 
-.top-bar {
-    color: var(--col-purple);
-    background-color: var(--col-seagreen);
-    width: 100%;
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    border-bottom: solid;
-    border-color: var(--col-purple);
-    border-width: 2px;
-    z-index: 150;
-    height: 80px;
-}
-
-#menu {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    margin-right: 30px;
-    height: 80px;
-    line-height: 80px;
-}
-
 li {
     display: flex;
     flex-direction: column;
@@ -49,35 +26,12 @@ a {
     text-decoration: none;
     outline: none;
 }
-/*
-a:link {
-    text-decoration: none;
-    outline: none;
-}
 
-a:visited {
-    text-decoration: none;
-    outline: none;
-}
-
-a:active {
-    text-decoration: none;
-    outline: none;
-}
-
-a:focus {
-    text-decoration: none;
-    outline: none;  
-}
-*/
 ul {
     list-style-type: none;
 }
 
 .items-design {
-    font-size: 1.5em;
-    font-weight: bold;
-    font-variant: small-caps;
     height: 50px;
     line-height: 50px;
     margin: auto 10px;
@@ -88,22 +42,7 @@ ul {
     border-color: var(--col-purple);
     color: var(--col-purple);
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-}
-
-.logo {
-    width: 200px;
-    margin-left: 30px;
-    text-align: center;
-    background-color: var(--col-palegreen);
-}
-
-.menu-item {
     background-color: var(--col-mauve);
-}
-
-.menu-item:hover {
-    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
-    transform: scale(0.95);
 }
 
 #hero-page {
@@ -113,8 +52,7 @@ ul {
 
 #banner {
     position: absolute;
-    /*top: calc(100px + 20vh);*/
-    top: 32vh;
+    top: 28vh;
     margin: 0 auto;
     width: 80%;
     text-align: center;
@@ -124,6 +62,40 @@ ul {
     line-height: 140%;
     text-shadow: 4px 4px 0px rgba(1, 1, 1, 1);
     color: white;
+}
+
+#menu {
+    position: absolute;
+    right: 60px;
+    top: 1vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    height: 80px;
+    line-height: 80px;
+    z-index: 200;
+}
+
+.menu-item {
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-variant: small-caps;
+    margin: 0 0 0 60px;
+    color: white;
+    text-shadow: 1.5px 1.5px 0px rgba(1, 1, 1, 1);
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-variant: small-caps;
+    position: absolute;
+    left: 60px;
+    top: 1vh;
+    height: 80px;
+    line-height: 80px;
+    color: white;
+    text-shadow: 1.5px 1.5px 0px rgba(1, 1, 1, 1);
 }
 
 #hero-background {
