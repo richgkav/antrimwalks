@@ -22,27 +22,21 @@ body {
     width: 100%;
     position: relative;
     display: grid;
-    grid-template-columns: 400px 1fr;
+    grid-template-columns: 1fr 1fr;
     border-bottom: solid;
-    border-top: solid;
     border-color: var(--col-purple);
     border-width: 2px;
     z-index: 150;
     height: 80px;
 }
 
-#menu, #logo {
+#menu {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     margin-right: 30px;
     height: 80px;
     line-height: 80px;
-}
-
-#logo {
-    margin-left: 30px;
-    justify-content: flex-start;
 }
 
 li {
@@ -89,10 +83,18 @@ ul {
     margin: auto 10px;
     padding: 0 20px;
     border-style: solid;
+    border-width: 2px;
     border-radius: 5px;
     border-color: var(--col-purple);
     color: var(--col-purple);
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+.logo {
+    width: 200px;
+    margin-left: 30px;
+    text-align: center;
+    background-color: var(--col-palegreen);
 }
 
 .menu-item {
@@ -102,14 +104,6 @@ ul {
 .menu-item:hover {
     box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
     transform: scale(0.95);
-}
-
-.logo-item   {
-    background-color: var(--col-palegreen);
-}
-
-#logo {
-    background-color: var(--col-skyblue);
 }
 
 #hero-page {
