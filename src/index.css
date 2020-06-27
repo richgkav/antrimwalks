@@ -106,13 +106,14 @@ ul {
     background-color: var(--col-skyblue);
 }
 
-#content {
-
+#hero-page {
+    display: flex;
+    justify-content: center;
 }
 
 #banner {
-    position: relative;
-    top: calc(120px + 10vh);
+    position: absolute;
+    top: calc(100px + 20vh);
     margin: 0 auto;
     width: 80%;
     text-align: center;
@@ -120,15 +121,14 @@ ul {
     font-weight: bold;
     font-variant: small-caps;
     line-height: 140%;
-    text-shadow: 2px 2px 0px #FFFFFF;
-    color: var(--col-purple);
+    text-shadow: 5px 5px 0px rgba(1, 1, 1, 1);
+    color: white;
 }
 
 #hero-background {
     width: 100%;
     height: 100vh;
     background-image: url(images/whitepark-bay.jpg);
-    /*background-size: cover;*/
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -137,7 +137,8 @@ ul {
 }
 
 .dark-background {
-    opacity: 0.5;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.25);
 }
 
 #walks-content {
