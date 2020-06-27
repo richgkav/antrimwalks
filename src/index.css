@@ -133,7 +133,11 @@ ul {
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
-    z-index: -100;;
+    z-index: -100;
+}
+
+.dark-background {
+    opacity: 0.5;
 }
 
 #walks-content {
