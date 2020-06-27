@@ -16,19 +16,19 @@ body {
     width: 100%;
 }
 
-#top-bar {
+.top-bar {
     color: var(--col-purple);
     background-color: var(--col-seagreen);
     width: 100%;
-    position: absolute;
-    top: 15px;
+    position: relative;
     display: grid;
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: 400px 1fr;
     border-bottom: solid;
     border-top: solid;
     border-color: var(--col-purple);
     border-width: 2px;
     z-index: 150;
+    height: 80px;
 }
 
 #menu, #logo {
@@ -81,7 +81,7 @@ ul {
 }
 
 .items-design {
-    font-size: large;
+    font-size: 1.5em;
     font-weight: bold;
     font-variant: small-caps;
     height: 50px;
@@ -106,12 +106,6 @@ ul {
 
 .logo-item   {
     background-color: var(--col-palegreen);
-    position: absolute;
-    top: -12px;
-    height: 100px;
-    line-height: 100px;
-    border-radius: 15px 15px 15px 15px;
-    font-size: 2.5em;
 }
 
 #logo {
