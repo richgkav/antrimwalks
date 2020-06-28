@@ -7,7 +7,7 @@ export class Walk {
         this.image1 = image1;
         this.image2 = image2;
     }
-    
+
 }
 
 export class Location {

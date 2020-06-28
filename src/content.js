@@ -1,4 +1,14 @@
-<h2>Glenarm walk 1</h2>
+import * as ClDef from './classes';
+
+export const allWalks = [];
+
+export function generateWalks() {
+    console.log('generateWalks called');
+    allWalks.push(new ClDef.Walk(null, null, walk1, null, null));
+    allWalks.push(new ClDef.Walk(null, null, walk2, null, null));
+}
+
+const walk1 = `<h2>Glenarm walk 1</h2>
 <h3>Layde Walk and Straidkilly Nature Reserve</h3>
 <p>This circular walk around Glemarm takes in the harbour, the village and the 
 nature reserve. There are excellent views along the way and some interesting 
@@ -51,3 +61,12 @@ Coast Road. Take care here crossing as traffic can be quick and take the road
 back into Glenarm.</p>
 <p>You have a choice now whether to take the steps down to the beach back to the 
 car park or follow the road.</p>
+`;
+
+const walk2 = `<h2>TEST Walk 2</h2>
+<h3>test heading 2</h3>
+<p>bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p>`;
