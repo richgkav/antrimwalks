@@ -1,13 +1,8 @@
 import * as Content from './content';
 
-export function allWalks() {
-
-
-
-}
+export function allWalks() {}
 
 export function oneWalk() {
-
     const allWalks = Content.allWalks;
 
     const content = document.getElementById('walk-description');
@@ -23,6 +18,4 @@ export function oneWalk() {
         newDiv.classList.add('one-image');
         images.appendChild(newDiv);
     }
-
-
 }
