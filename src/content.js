@@ -4,8 +4,8 @@ export const allWalks = [];
 
 export function generateWalks() {
     console.log('generateWalks called');
-    allWalks.push(new ClDef.Walk(null, null, walk1, null, null));
-    allWalks.push(new ClDef.Walk(null, null, walk2, null, null));
+    allWalks.push(new ClDef.Walk(null, null, walk1, ['filename1','filename2']));
+    allWalks.push(new ClDef.Walk(null, null, walk2, ['filename3','filename4']));
 }
 
 const walk1 = `<h2>Glenarm walk 1</h2>
