@@ -2,7 +2,8 @@ import * as ClDef from './classes';
 
 import glenarmHarbour from './images/glenarm-harbour.jpg';
 import glenarmOffice from './images/glenarm-estate-office.jpg';
-
+import glenarmView1s from './images/glenarm-view1s.jpg';
+import slemish from './images/slemish.jpg';
 
 export const allWalks = [];
 
@@ -10,7 +11,7 @@ export function generateWalks() {
     console.log('generateWalks called');
 
     allWalks.push(
-        new ClDef.Walk(null, null, walk1, [
+        new ClDef.Walk('Glenarm - Layde and Straidkilly', glenarmView1s, 'A view of Glenarm fron a distance', walk1, [
             glenarmHarbour,
 			'Glenarm\'s small marina full of boats in the afternoon sun.',
 			'Glenarm marina',
@@ -21,8 +22,13 @@ export function generateWalks() {
     );
 
     allWalks.push(
-        new ClDef.Walk(null, null, walk2, [
-            'filename3', 'filename4'
+        new ClDef.Walk('Another walk', glenarmView1s, 'test alt text for thumbnail image', walk2, [
+			slemish, 
+			'alt text',
+			'title 1',
+			slemish,
+			'alt text',
+			'title 2'
         ])
     );
 

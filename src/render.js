@@ -1,21 +1,47 @@
 import * as Content from './content';
 
 export function allWalks() {
+	const walksContent = document.getElementById('walks-content');
+	clearChildElements(walksContent);
+	// Get array containing all the Walk objects
+	const allWalks = Content.allWalks;
+	for (let i = 0; i != allWalks.length; i++) {
+		const divWalkSelector = document.createElement('div');
+		divWalkSelector.classList.add('walk-selector');
+		const walkObject = allWalks[i];
+		const img = showImage(
+			walkObject.thumbnail,
+			200,
+			200,
+			walkObject.thumbalt
+		);
 
+		const walkSelectTitle = document.createElement('div');
+		walkSelectTitle.classList.add('walk-selector-title');
+		walkSelectTitle.innerText = walkObject.title;
+
+		divWalkSelector.appendChild(walkSelectTitle);
+		divWalkSelector.appendChild(img);
+
+		walksContent.appendChild(divWalkSelector);
+	}
 }
 
 export function oneWalk(index) {
 
+	const walksContent = document.getElementById('walks-content');
+	clearChildElements(walksContent);
 
-    const allWalks = Content.allWalks;
-    const dnodes = document.getElementsByClassName('walk-description');
-	const walkDescription = dnodes[0];
+	const divDescription = document.createElement('div');
+	divDescription.classList.add('walk-description');
+	const divImages = document.createElement('div');
+	divImages.classList.add('walk-images');
+
+	// Get array containing all the Walk objects
+	const allWalks = Content.allWalks;
 	const walkObject = allWalks[index];
 
-    walkDescription.innerHTML = walkObject.description;
-
-	const wnodes = document.getElementsByClassName('walk-images');
-	const walkImages = wnodes[0];
+    divDescription.innerHTML = walkObject.description;
 
     for (let i = 0; i != walkObject.images.length; i += 3) {
 		const singleImage = document.createElement('div');
@@ -34,8 +60,11 @@ export function oneWalk(index) {
 		
 		singleImage.appendChild(img);
 		singleImage.appendChild(overlayText);
-        walkImages.appendChild(singleImage);
+        divImages.appendChild(singleImage);
 	}
+
+	walksContent.appendChild(divDescription);
+	walksContent.appendChild(divImages);
 
 }
 
@@ -48,10 +77,12 @@ function showImage(src, width, height, alt) {
     return img;
 }
 
+/*
 function clearWalks() {
 	const node = document.getElementById('walks-content');
 	clearChildElements(node);
 }
+*/
 
 function clearChildElements(node) {
 	// clears all child elements under the specified node
