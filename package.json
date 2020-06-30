@@ -1,31 +1,31 @@
 {
-    "name": "antrim-walks",
-    "version": "1.0.0",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "devDependencies": {
-        "css-loader": "^3.6.0",
-        "eslint": "^7.3.1",
-        "file-loader": "^6.0.0",
-        "style-loader": "^1.2.1",
-        "webpack": "^4.43.0",
-        "webpack-cli": "^3.3.12"
-    },
-    "dependencies": {
-        "css-variables-loader": "^2.0.2"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/richgkav/antrimwalks.git"
-    },
-    "bugs": {
-        "url": "https://github.com/richgkav/antrimwalks/issues"
-    },
-    "homepage": "https://github.com/richgkav/antrimwalks#readme",
-    "description": ""
+  "name": "antrim-walks",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^3.6.0",
+    "eslint": "^7.3.1",
+    "file-loader": "^6.0.0",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {
+    "css-variables-loader": "^2.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/richgkav/antrimwalks.git"
+  },
+  "bugs": {
+    "url": "https://github.com/richgkav/antrimwalks/issues"
+  },
+  "homepage": "https://github.com/richgkav/antrimwalks#readme",
+  "description": ""
 }

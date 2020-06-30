@@ -1,16 +1,21 @@
 import * as Content from './content';
 
-export function allWalks() {}
+export function allWalks() {
+
+}
 
 export function oneWalk(index) {
 
+
     const allWalks = Content.allWalks;
-    const walkDescription = document.getElementById('walk-description');
-    const walkObject = allWalks[index];
+    const dnodes = document.getElementsByClassName('walk-description');
+	const walkDescription = dnodes[0];
+	const walkObject = allWalks[index];
 
     walkDescription.innerHTML = walkObject.description;
 
-    const walkImages = document.getElementById('walk-images');
+	const wnodes = document.getElementsByClassName('walk-images');
+	const walkImages = wnodes[0];
 
     for (let i = 0; i != walkObject.images.length; i += 3) {
 		const singleImage = document.createElement('div');
@@ -30,7 +35,8 @@ export function oneWalk(index) {
 		singleImage.appendChild(img);
 		singleImage.appendChild(overlayText);
         walkImages.appendChild(singleImage);
-    }
+	}
+
 }
 
 function showImage(src, width, height, alt) {
@@ -40,6 +46,24 @@ function showImage(src, width, height, alt) {
     img.height = height;
     img.alt = alt;
     return img;
-    // This next line will just add it to the <body> tag
-    //document.body.appendChild(img);
+}
+
+function clearWalks() {
+	const node = document.getElementById('walks-content');
+	clearChildElements(node);
+}
+
+function clearChildElements(node) {
+	// clears all child elements under the specified node
+	while (node.firstChild) {
+		node.removeChild(node.lastChild);
+	}
+}
+
+function hideElement(node) {
+	node.classList.add('hide-element');
+}
+
+function showElement(node) {
+	node.classList.remove('hide-element');
 }
