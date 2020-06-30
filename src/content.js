@@ -1,26 +1,43 @@
 import * as ClDef from './classes';
 
+import glenarmHarbour from './images/glenarm-harbour.jpg';
+import glenarmOffice from './images/glenarm-estate-office.jpg';
+
+
 export const allWalks = [];
 
 export function generateWalks() {
     console.log('generateWalks called');
-    allWalks.push(new ClDef.Walk(null, null, walk1, ['filename1','filename2']));
-    allWalks.push(new ClDef.Walk(null, null, walk2, ['filename3','filename4']));
+
+    allWalks.push(
+        new ClDef.Walk(null, null, walk1, [
+            glenarmHarbour,
+			'Glenarm\'s small marina full of boats in the afternoon sun.',
+			'Glenarm marina',
+            glenarmOffice,
+			'Glenarm\'s estate office built 1739 and closed in the 1930s.',
+			'The old estate office'
+        ])
+    );
+
+    allWalks.push(
+        new ClDef.Walk(null, null, walk2, [
+            'filename3', 'filename4'
+        ])
+    );
+
 }
 
-const walk1 = `<h2>Glenarm walk 1</h2>
+const walk1 =
+    `<h2>Glenarm walk 1</h2>
 <h3>Layde Walk and Straidkilly Nature Reserve</h3>
 <p>This circular walk around Glemarm takes in the harbour, the village and the 
-nature reserve. There are excellent views along the way and some interesting 
-history.</p>
+neighbouring nature reserve.</p>
 <p>Starting from the car park take the eastern corner path by the playground and
- cross the footbridge to Eglington Yard (currently used as a carpark). During 
- the nesting season Black Guillemots nest in holes in the harbor walls and have 
- done since 1976</p>
-<p>Turn left until you reach the edge of the pier and then turn right to follow 
-the path around the edge of the marina until you reach the marina office.</p>
-<p>Turn right here and cross over the road to the wall of Steensons
- jewelers and Glenarm tourist information office.</p>
+ cross the footbridge to Eglington Yard (currently used as a carpark).</p>
+<p>Bear left and follow the path around to the marina office then head for the
+road, crossing it to reach the wall of Steensons jewelers and Glenarm tourist 
+information office.</p>
 <p>Here turn left and cross over Mark Street, then make for the path that leads 
 up by the side of the garden with a tunnel in it, which used to lead to the old 
 quarry.</p>
@@ -63,7 +80,8 @@ back into Glenarm.</p>
 car park or follow the road.</p>
 `;
 
-const walk2 = `<h2>TEST Walk 2</h2>
+const walk2 =
+    `<h2>TEST Walk 2</h2>
 <h3>test heading 2</h3>
 <p>bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
