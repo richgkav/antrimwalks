@@ -9,7 +9,13 @@
     --col-mauve: #6100c2;
     --col-purple: #37123c;
     --col-yellow: #fff8dd;
-    --bord-walks: 50px;
+	--bord-walks: 50px;
+	
+	--overlay-text-color: white;
+	--overlay-text-shadow: 1.2px 1.2px 0px rgba(1, 1, 1, 1);
+	--overlay-text-size: 1rem;
+
+	--small-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
 }
 
 body {
@@ -31,6 +37,11 @@ a {
 
 ul {
     list-style-type: none;
+}
+
+.border-style {
+	border-radius: 10px;
+	box-shadow: var(--small-shadow);
 }
 
 .items-design {
@@ -98,7 +109,8 @@ ul {
     height: 80px;
     line-height: 80px;
     color: white;
-    text-shadow: 1.5px 1.5px 0px rgba(1, 1, 1, 1);
+	text-shadow: 1.5px 1.5px 0px rgba(1, 1, 1, 1);
+	overflow: hidden;
 }
 
 #hero-background {
@@ -123,12 +135,12 @@ ul {
 	position: relative;
 	border-radius: 70px 70px 0 0;
     background-color: var(--col-palegreen);
-    /*display: flex;
-    flex-direction: row;
-    justify-content: center;*/
     padding-top: 95px;
 	min-height: 100vh;
 	margin: 0 3px 0 3px;
+	background: #3a7bd5;  /* fallback for old browsers */
+	background: linear-gradient(to right, #3a6073, #3a7bd5);
+
 }
 
 #walks-content {
@@ -138,6 +150,7 @@ ul {
 	border-top: solid;
 	border-top-width: 3px;
 	padding-top: 40px;
+	padding-bottom: 40px;
 }
 
 .walk-selector {
@@ -150,18 +163,34 @@ ul {
 .walk-selector-title {
 	height: 30px;
 	text-align: center;
+	color: white;
 }
 
 .walk-selector>img {
 	width: 200;
 	margin: 0 auto;
-	border-radius: 10px;
-	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+	cursor: pointer;
+}
+
+@keyframes example {
+	from {
+		box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+		transform: scale(1);
+	}
+	to {
+		box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.99);
+		transform: scale(1.01);
+	}
+}
+
+.walk-selector>img:hover {
+	animation-name: example;
+	animation-duration: 0.5s;
+	box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.99);
+	transform: scale(1.01);
 }
 
 .walk-description {
-    border-style: solid;
-    border-radius: 20px;
     padding: 25px;
     margin: 0 var(--bord-walks) 0 var(--bord-walks);
     background-color: var(--col-yellow);
@@ -173,6 +202,10 @@ ul {
     margin: 0 var(--bord-walks) 0 0;
 }
 
+#the-walks-logo {
+	cursor: pointer;
+}
+
 .hide-element {
 	display: none;
 }
@@ -181,40 +214,48 @@ ul {
 	position: relative;
     width: 300px;
     height: 200px;
-    margin: 0 0 30px 0;
+	margin: 0 0 30px 0;
 }
 
 .one-image>img {
 	position: absolute;
-	border-style: solid;
-    border-radius: 20px;
 }
 
-.overlay-text {
+.image-text {
 	position: absolute;
 	top: 10px;
 	left: 15px;
-	color: rgb(255, 255, 255);
 	border-radius: 5px;
 	padding: 3px;
-	text-shadow: 1.2px 1.2px 0px rgba(1, 1, 1, 1);
 }
 
-h2, h3, p {
+.small-text-shadow {
+	font-size: var(--overlay-text-size);
+	color: var(--overlay-text-color);
+	text-shadow: var(--overlay-text-shadow);	
+}
+
+h2, h3, h4, p {
     margin-bottom: 10px;
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 h3 {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
 }
 
-p {
-    font-size: 1.1rem;
+h4 {
+	font-size: 1.25rem;
 }
+
+p, b {
+    font-size: 1rem;
+}
+
+
 
 #about-content {
     height: 100vh;
