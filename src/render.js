@@ -84,7 +84,6 @@ export function oneWalk(index) {
 
 	walksContent.appendChild(divDescription);
 	walksContent.appendChild(divImages);
-
 }
 
 function showImage(src, width, height, alt) {
@@ -96,24 +95,9 @@ function showImage(src, width, height, alt) {
     return img;
 }
 
-/*
-function clearWalks() {
-	const node = document.getElementById('walks-content');
-	clearChildElements(node);
-}
-*/
-
 function clearChildElements(node) {
 	// clears all child elements under the specified node
 	while (node.firstChild) {
 		node.removeChild(node.lastChild);
 	}
-}
-
-function hideElement(node) {
-	node.classList.add('hide-element');
-}
-
-function showElement(node) {
-	node.classList.remove('hide-element');
 }
