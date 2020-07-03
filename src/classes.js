@@ -1,17 +1,18 @@
 export class Walk {
 
-    // images should be an array of filenames
+    // images is an array of [image, alt text, title, ....]
     
-    constructor(layout, thumbnail, description, images) {
-        this.layout = layout;
-        this.thumbnail = thumbnail;
+    constructor(title, thumbnail, thumbalt, description, images) {
+        this.title = title;
+		this.thumbnail = thumbnail;
+		this.thumbalt = thumbalt;
         this.description = description;
         this.images = images;
     }
 }
 
 export class Location {
-    constructor(title, thumbnail, description) {
+    constructor(title, thumbnail, thumbalt, description) {
         this.title = title;
         this.thumbnail = thumbnail;
         this.description = description;
