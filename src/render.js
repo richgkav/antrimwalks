@@ -15,10 +15,9 @@ export function allWalks() {
 		const divWalkSelector = document.createElement('div');
 		divWalkSelector.classList.add('walk-selector');
 		const walkObject = arrayAllWalks[i];
-		const img = showImage(
+
+		const img = addImg(
 			walkObject.thumbnail,
-			170,
-			170,
 			walkObject.thumbalt
 		);
 
@@ -68,12 +67,10 @@ export function oneWalk(index) {
 
     for (let i = 0; i != walkObject.images.length; i += 3) {
 		const singleImage = document.createElement('div');
-        singleImage.classList.add('one-image');
+		singleImage.classList.add('single-walk-image');
 
-        const img = showImage(
+        const img = addImg(
             walkObject.images[i],
-            300,
-            200,
             walkObject.images[i + 1]
 		);
 
@@ -83,8 +80,8 @@ export function oneWalk(index) {
 		overlayText.classList.add('image-text','small-text-shadow');
 		overlayText.innerText = walkObject.images[i + 2];
 		
-		singleImage.appendChild(img);
 		singleImage.appendChild(overlayText);
+		singleImage.appendChild(img);
         divImages.appendChild(singleImage);
 	}
 
@@ -92,11 +89,9 @@ export function oneWalk(index) {
 	//walksContent.appendChild(divImages);
 }
 
-function showImage(src, width, height, alt) {
+function addImg(src, alt) {
     var img = document.createElement("img");
     img.src = src;
-    img.width = width;
-    img.height = height;
     img.alt = alt;
     return img;
 }

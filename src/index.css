@@ -153,14 +153,16 @@ ul {
 }
 
 #walks-content {
+	width: 97vw;	
 	position: absolute;
-	width: 100%;
-	top: 15vh;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
+	margin: 0 1vw 0 1vw;
+	top: 20vh;
+	display: grid;
+	grid-template-columns: 200px 1fr 200px;
 	padding-top: 40px;
 }
+
+/* left side */
 
 #all-walks {
 	display: flex;
@@ -168,12 +170,11 @@ ul {
 	margin: var(--margin-r);
 }
 
-
 .walk-selector {
 	margin: 0 0 0 var(--bord-walks);
 	display: grid;
-	width: 250px;
-	height: 250px;
+	width: 100%;
+	height: auto;
 }
 
 .walk-selector-title {
@@ -183,10 +184,11 @@ ul {
 }
 
 .walk-selector>img {
-	width: 200;
 	margin: 0 auto;
 	cursor: pointer;
 	z-index: 200;
+	width: 100%;
+	height: auto;
 }
 
 @keyframes example {
@@ -207,30 +209,35 @@ ul {
 	transform: scale(1.01);
 }
 
-.walk-description {
-    padding: 25px;
-    margin: var(--margin-lr);
-}
+/* right side */
 
 .walk-images {
     display: flex;
     flex-direction: column;
-    margin: var(--margin-l);
+	margin: var(--margin-l);
+}
+
+.single-walk-image {
+	position: relative;
+}
+
+.single-walk-image>img {
+	width: 100%;
+	height: auto;
+	position: relative;
+	margin: 0 0 30px 0;
+}
+
+/* center */
+
+#walk-description {
+    padding: 25px;
+	margin: var(--margin-lr);
+	color: white;
 }
 
 .hide-element {
 	display: none;
-}
-
-.one-image {
-	position: relative;
-    width: 300px;
-    height: 200px;
-	margin: 0 0 30px 0;
-}
-
-.one-image>img {
-	position: absolute;
 }
 
 .image-text {
