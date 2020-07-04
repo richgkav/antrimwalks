@@ -4,12 +4,6 @@
 }
 
 :root {
-    --col-palegreen: #c6adcf;
-    --col-seagreen: #087e8b;
-    --col-mauve: #6100c2;
-    --col-purple: #37123c;
-    --col-yellow: #fff8dd;
-	
 	--overlay-text-color: white;
 	--overlay-text-shadow: 1.2px 1.2px 0px rgba(1, 1, 1, 1);
 	--overlay-text-size: 1rem;
@@ -20,6 +14,7 @@
 	--margin-r: 0 1vw 0 0;
 	--margin-l: 0 0 0 1vw;
 	--margin-lr: 0 1vw 0 1vw;
+
 }
 
 body {
@@ -139,6 +134,12 @@ ul {
 	min-height: 100%;
 }
 
+.top-bar {
+	width: 100%;
+	position: relative;
+	height:	80px;
+}
+
 #the-walks-logo {
 	cursor: pointer;
 }
@@ -153,9 +154,7 @@ ul {
 }
 
 #walks-content {
-	width: 97vw;	
-	position: absolute;
-	margin: 0 1vw 0 1vw;
+	width: 100%;	
 	top: 20vh;
 	display: grid;
 	grid-template-columns: 200px 1fr 200px;
@@ -167,20 +166,25 @@ ul {
 #all-walks {
 	display: flex;
 	flex-direction: column;
-	margin: var(--margin-r);
+	margin: var(--margin-lr);
+	padding: 2px 0 10px 0;
+	background-color: rgba(35, 35, 58, 0.555);
 }
 
 .walk-selector {
-	margin: 0 0 0 var(--bord-walks);
+	/*margin: 0 0 0 var(--bord-walks);*/
+	margin: 0 auto;
 	display: grid;
-	width: 100%;
+	width: 90%;
 	height: auto;
+	padding: 10px 0 10px 0;
 }
 
 .walk-selector-title {
-	height: 30px;
+	/*height: 30px;*/
 	text-align: center;
 	color: white;
+	padding: 0 0 10px 0;
 }
 
 .walk-selector>img {
@@ -214,11 +218,15 @@ ul {
 .walk-images {
     display: flex;
     flex-direction: column;
-	margin: var(--margin-l);
+	margin: var(--margin-lr);
+	padding: 10px 0 10px 0;
+	background-color: rgba(35, 35, 58, 0.555);
 }
 
 .single-walk-image {
 	position: relative;
+	width: 90%;
+	margin: 0 auto;
 }
 
 .single-walk-image>img {
@@ -234,6 +242,7 @@ ul {
     padding: 25px;
 	margin: var(--margin-lr);
 	color: white;
+	background-color: rgba(35, 35, 58, 0.555);
 }
 
 .hide-element {
