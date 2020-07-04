@@ -3,19 +3,22 @@ import * as Content from './content';
 export function allWalks() {
 
 	console.log('allWalks() called');
-	const walksContent = document.getElementById('walks-content');
-	clearChildElements(walksContent);
+	const divAllWalks = document.getElementById('all-walks');
+	clearChildElements(divAllWalks);
 	// Get array containing all the Walk objects
-	const allWalks = Content.allWalks;
 
-	for (let i = 0; i != allWalks.length; i++) {
+	//const divWalkSelector = document.getElementById('walk-selector');
+
+	const arrayAllWalks = Content.allWalks;
+
+	for (let i = 0; i != arrayAllWalks.length; i++) {
 		const divWalkSelector = document.createElement('div');
 		divWalkSelector.classList.add('walk-selector');
-		const walkObject = allWalks[i];
+		const walkObject = arrayAllWalks[i];
 		const img = showImage(
 			walkObject.thumbnail,
-			200,
-			200,
+			170,
+			170,
 			walkObject.thumbalt
 		);
 
@@ -33,7 +36,7 @@ export function allWalks() {
 		divWalkSelector.appendChild(walkSelectTitle);
 		divWalkSelector.appendChild(img);
 
-		walksContent.appendChild(divWalkSelector);
+		divAllWalks.appendChild(divWalkSelector);
 	}
 
 	// clicking All Walks calls this function. note to self the arrow function
@@ -42,17 +45,20 @@ export function allWalks() {
 	theWalksLogo.addEventListener('click', () => {
 		this.allWalks();
 	});
+
+	// render the first walk
+	oneWalk(0);
 }
 
 export function oneWalk(index) {
 	console.log(`oneWalk(${index}) called`);
-	const walksContent = document.getElementById('walks-content');
-	clearChildElements(walksContent);
+	//const walksContent = document.getElementById('walks-content');
+	//clearChildElements(walksContent);
 
-	const divDescription = document.createElement('div');
-	divDescription.classList.add('walk-description', 'border-style');
-	const divImages = document.createElement('div');
-	divImages.classList.add('walk-images');
+	const divDescription = document.getElementById('walk-description');
+	const divImages = document.getElementById('all-walk-images');
+	clearChildElements(divDescription);
+	clearChildElements(divImages);
 
 	// Get array containing all the Walk objects
 	const allWalks = Content.allWalks;
@@ -82,8 +88,8 @@ export function oneWalk(index) {
         divImages.appendChild(singleImage);
 	}
 
-	walksContent.appendChild(divDescription);
-	walksContent.appendChild(divImages);
+	//walksContent.appendChild(divDescription);
+	//walksContent.appendChild(divImages);
 }
 
 function showImage(src, width, height, alt) {

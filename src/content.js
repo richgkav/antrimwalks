@@ -4,14 +4,25 @@ import glenarmHarbour from './images/glenarm-harbour.jpg';
 import glenarmOffice from './images/glenarm-estate-office.jpg';
 import glenarmView1s from './images/glenarm-view1s.jpg';
 import slemish from './images/slemish.jpg';
+import lloydImage from './images/lloyd.jpg'
 
 export const allWalks = [];
 
 export function generateWalks() {
-    console.log('generateWalks called');
+	console.log('generateWalks called');
+	
+	allWalks.push(
+		new ClDef.Walk('About Antrim Walks', lloydImage, 'null description', walk0, 
+		[
+			lloydImage,
+			'Lloyd placeholder text',
+			'Temporary Image'
+		])
+	);
 
     allWalks.push(
-        new ClDef.Walk('Glenarm - Layde and Straidkilly', glenarmView1s, 'A view of Glenarm fron a distance', walk1, [
+		new ClDef.Walk('Glenarm - Layde and Straidkilly', glenarmView1s, 'A view of Glenarm fron a distance', walk1,
+		[
             glenarmHarbour,
 			'Glenarm\'s small marina full of boats in the afternoon sun.',
 			'Glenarm marina',
@@ -22,7 +33,8 @@ export function generateWalks() {
     );
 
     allWalks.push(
-        new ClDef.Walk('Another walk', glenarmView1s, 'test alt text for thumbnail image', walk2, [
+		new ClDef.Walk('Another walk', glenarmView1s, 'test alt text for thumbnail image', walk2, 
+		[
 			slemish, 
 			'alt text',
 			'title 1',
@@ -33,6 +45,11 @@ export function generateWalks() {
     );
 
 }
+
+const walk0 = `
+<h2>Some Description</h2>
+<h3>Sub heading</h3>
+<p>Click on the links on the left to display each walk description.</p>`;
 
 const walk1 =`
 <h2>Glenarm 1</h2>

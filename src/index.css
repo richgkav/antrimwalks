@@ -9,7 +9,6 @@
     --col-mauve: #6100c2;
     --col-purple: #37123c;
     --col-yellow: #fff8dd;
-	--bord-walks: 50px;
 	
 	--overlay-text-color: white;
 	--overlay-text-shadow: 1.2px 1.2px 0px rgba(1, 1, 1, 1);
@@ -17,10 +16,10 @@
 
 	--txt-shadow-small: 0px 0px 5px 0px rgba(0,0,0,0.75);
 	--txt-shadow-medium: 2px 2px 0px rgba(1, 1, 1, 1);
-	--border-rnd-a80px: 80px;
-	--border-rnd-t80px: 80px 80px 0 0;
-	--border-rnd-b80px: 0 0 80px 80px;
-	--border-width-2px: 2px;
+
+	--margin-r: 0 1vw 0 0;
+	--margin-l: 0 0 0 1vw;
+	--margin-lr: 0 1vw 0 1vw;
 }
 
 body {
@@ -68,6 +67,22 @@ ul {
 	justify-content: center;
 }
 
+.gradient-layer {
+    width: 100%;
+    background: linear-gradient( to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 33%, rgba(0, 0, 0, 0.2) 66%, rgba(0, 0, 0, 0) 100%);
+}
+
+#hero-background {
+    background-image: url(images/whitepark-bay.jpg);	
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+	z-index: -100;
+}
+
 #banner {
     position: absolute;
     top: 30vh;
@@ -80,6 +95,20 @@ ul {
     line-height: 140%;
     text-shadow: 4px 4px 0px rgba(1, 1, 1, 1);
     color: white;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-variant: small-caps;
+    position: absolute;
+    left: 60px;
+    top: 1vh;
+    height: 80px;
+    line-height: 80px;
+    color: white;
+	text-shadow: var(--txt-shadow-medium);
+	overflow: hidden;
 }
 
 .menu {
@@ -103,41 +132,15 @@ ul {
     text-shadow: var(--txt-shadow-medium);
 }
 
-.logo {
-    font-size: 2.5rem;
-    font-weight: bold;
-    font-variant: small-caps;
-    position: absolute;
-    left: 60px;
-    top: 1vh;
-    height: 80px;
-    line-height: 80px;
-    color: white;
-	text-shadow: var(--txt-shadow-medium);
-	overflow: hidden;
-}
-
-#hero-background {
-    background-image: url(images/whitepark-bay.jpg);	
-    width: 100%;
-    height: 100vh;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: relative;
-	z-index: -100;
-}
-
-.gradient-layer {
-    width: 100%;
-    background: linear-gradient( to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 33%, rgba(0, 0, 0, 0.2) 66%, rgba(0, 0, 0, 0) 100%);
-}
-
 #walks-page {
 	position: relative;
 	height: 200vh;
 	z-index: 0;
 	min-height: 100%;
+}
+
+#the-walks-logo {
+	cursor: pointer;
 }
 
 .walks-background {
@@ -149,7 +152,6 @@ ul {
 	z-index: -100;
 }
 
-
 #walks-content {
 	position: absolute;
 	width: 100%;
@@ -160,8 +162,15 @@ ul {
 	padding-top: 40px;
 }
 
+#all-walks {
+	display: flex;
+	flex-direction: column;
+	margin: var(--margin-r);
+}
+
+
 .walk-selector {
-	margin: 0 20px 0 20px;
+	margin: 0 0 0 var(--bord-walks);
 	display: grid;
 	width: 250px;
 	height: 250px;
@@ -200,18 +209,13 @@ ul {
 
 .walk-description {
     padding: 25px;
-    margin: 0 var(--bord-walks) 0 var(--bord-walks);
-    background-color: var(--col-yellow);
+    margin: var(--margin-lr);
 }
 
 .walk-images {
     display: flex;
     flex-direction: column;
-    margin: 0 var(--bord-walks) 0 0;
-}
-
-#the-walks-logo {
-	cursor: pointer;
+    margin: var(--margin-l);
 }
 
 .hide-element {
@@ -262,8 +266,6 @@ h4 {
 p, b {
     font-size: 1rem;
 }
-
-
 
 #about-content {
     height: 100vh;
