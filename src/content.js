@@ -1,10 +1,11 @@
 import * as ClDef from './classes';
 
 import glenarmHarbour from './images/glenarm-harbour.jpg';
-import glenarmOffice from './images/glenarm-estate-office.jpg';
-import glenarmView1s from './images/glenarm-view1s.jpg';
+import glenarmOffice from './images/glenarm-estate.jpg';
+import glenarmView1s from './images/glenarm-view1.jpg';
 import slemish from './images/slemish.jpg';
-import lloydImage from './images/lloyd.jpg'
+import slemishSmall from './images/slemish-1.jpg';
+import lloydImage from './images/lloyd.jpg';
 
 export const allWalks = [];
 
@@ -12,7 +13,7 @@ export function generateWalks() {
 	console.log('generateWalks called');
 	
 	allWalks.push(
-		new ClDef.Walk('About Antrim Walks', lloydImage, 'null description', walk0, 
+		new ClDef.Walk('About Antrim Walks', slemishSmall, 'null description', walk0, 
 		[
 			lloydImage,
 			'Lloyd placeholder text',
@@ -62,72 +63,58 @@ You will visit the harbour, the village center and the neighbouring nature reser
 <p>The main carpark is on the seafront next to St Patricks church.</p>
 
 <h4>Amenities</h4>
-Glenarm has two pubs (conveniently next to each other), a shop and there is 
+<p>Glenarm has two pubs (conveniently next to each other), a shop and there is 
 usually a food van in the carpark. There are toilets next to the carpark.</p>
 
 <h4>Directions</h4>
 
 <p>Starting from the car park take the eastern corner path by the playground and
- cross the footbridge to Eglington Yard (currently used as a carpark).</p>
+ cross the footbridge to Eglington Yard. Bear left to follow the path until you 
+ reach the marina office then walk by it heading for the road. Cross over and bear 
+ left at the Glenarm tourist information car park.</p>
 
- <p>Bear left and follow the path around to the marina office then head for the
-road, crossing it to reach the wall of Steensons jewelers and Glenarm tourist 
-information office.</p>
+<p>On the opposite side of the road there is a flowerbed area with an old tunnel and 
+to the side of that is the Plate Road path. Go up the path and turn right to 
+walk up Dickeystown Road past the site of the old quarry on yor left. Head up 
+the Layde Walk which was originally part of a 3 Mile canal that used to 
+power the limestone crushing mill at the old quarry.</p>
 
-<p>Here turn left and cross over Mark Street, then make for the path that leads 
-up by the side of the garden with a tunnel in it, which used to lead to the old 
-quarry.</p>
+<p>Follow the path to Spring Hill road where you will turn right and follow the road
+down taking the left fork at which point Spring Hill becomes The Vennel. Continue 
+down this short road to reach the center of the village with Castle Street 
+opposite. If you want to have a look at the old estate buldings built in 1739 
+take a left here and you will find them next to the forest gates.</p>
 
-<p>The path leads to Dickeystown Road so take a right to walk up the fairly 
-steep hill passing the old limestone querry on the left and later gardens on the 
-right. There are excellent views of Glenarm from this road.</p>
+<p>Head back to the crossroads and turn left down Castle Street passing The Old 
+Schoolhouse (now a home) to reach the bridge to the Barbican entrance to the 
+castle. Here there are good views up and down the Glenarm river to the sea. 
+Again turn back to head up to the crossroads and at the end of the road take a 
+left to head down Toberwine Street passing the shop and two pubs, then turn left 
+onto The Cloney and head over the bridge.</p>
 
-<p>After about 300 Meters you will reach the Layde Path which was originally 
-part of a 3 Mile canal that used to power the limestone crushing mill at the 
-quarry.</p>
+<p>Bear left at the fork following the castle walls to walk up Straidkilly road 
+passing the cemetary to reach some houses on the right. Shortly after you will 
+see the entrance to a path that leads to Straidkilly  nature reserve. This is a 
+fairly new path having been created in 2017 on land recently unleased from the 
+present quarry owners, and there are clear marking posts to guide you through.</p>
 
-<p>Follow the path to Spring Hill where you will turn right and follow the road
-down taking the left fork at which point Spring Hill becomes The Vennel.</p>
+<p>Follow the path through the trees and when you reach some steps go up them 
+and continue to follow the winding path. Eventually you will reach a style over 
+an old farm fence. Once over that you are in the nature reserve and from here on
+ the path can be steep and may be slippy in wet weather so take care. Eventually 
+ you come to a clearing with a picnic bench and good views over 
+to Carnlough and the hills behind [[ get the name ]].</p>
 
-<p>Continue down this short road to reach the center of the village with Castle
-Street just opposite<p>
+<p>Continue through the clearing down the path taking a right and walk along the 
+Straidkilly road for about a third of a mile until you reach another path on the 
+left. This path is known as Bachelors Walk but is not signposted so can easily be 
+ missed. If you can see a fence on the left and a field while still on Straidkilly 
+ Road then  you have probably gone too far!</p>
 
-<p>Here if you want you can take a left and walk up to the forest entrance for a 
-quick look at the old estate buildings that date from 1739.</p>
-
-<p>Double back and turn down Castle Street passing The Old Schoolhouse to reach
-the bridge to the Barbican entrance to the castle. There are good views
-up and down the Glenarm river.</p>
-
-<p>Turn back and at the end of the road take a left to head down Toberwine 
-Street then turn left onto The Cloney and head over the bridge.</p>
-
-<p>Follow the castle walls to take Straidkilly road on the left just after St 
-Patricks church and follow it up the hill staying on Straidkilly road as it 
-passes the cemetary.</p>
-
-<p>You will reach some houses on the left and and shortly after you will see the
- entrance to the nature reserve. This is a fairly new part of the reserve having
-  been created in 2017 which leads you to the old reserve.</p>
-
-<p>Follow the path through the trees and keep on the main path until you reach 
-some steps. Go up the steps and follow the winding path through the reserve. The 
-path gets steep in places and can be slippy in wet weather so take care. 
-Eventually you will come to a clearing with a picnic bench and good views over 
-to Carnlough.</p>
-
-<p>Continue through the clearing down a path taking a right and walk along the 
-Straidkilly road for about a third of a mile until you reach a path on the left. 
- This path is known as Bachelors Walk but is not signposted so can easily be 
- missed. If you can see a fence on the left while still on Straidkilly Road then 
- you have probably gone too far!</p>
-
-<p>Follow the winding path down past rocks and a bench eventually to reach the 
-Coast Road. Cross over the road (taking care as traffic can be fast) and head 
-back into Glenarm.</p>
-
-<p>You can now see the car park at the other end of the beach so either walk 
-back along the road or take the beach back to where you started.</p>
+<p>Follow Bachelors Walk down the winding path, past rocks and a bench eventually 
+to reach the Coast Road. This can be a busy road so take care crossing over. 
+Head back to Glenarm either along the road or the beach to reach the starting 
+point in the carpark.</p>
 `;
 
 const walk2 =
