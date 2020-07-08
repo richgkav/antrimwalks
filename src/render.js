@@ -49,13 +49,13 @@ export function allWalks() {
 	oneWalk(0);
 }
 
+
 export function oneWalk(index) {
 	console.log(`oneWalk(${index}) called`);
-	//const walksContent = document.getElementById('walks-content');
-	//clearChildElements(walksContent);
-
+	
 	const divDescription = document.getElementById('walk-description');
 	const divImages = document.getElementById('all-walk-images');
+
 	clearChildElements(divDescription);
 	clearChildElements(divImages);
 
@@ -79,14 +79,33 @@ export function oneWalk(index) {
 		const overlayText = document.createElement('div');
 		overlayText.classList.add('image-text','small-text-shadow');
 		overlayText.innerText = walkObject.images[i + 2];
+
+		img.addEventListener('click', (event) => {
+			const src = event.target.getAttribute('src');
+			console.log(src);
+			displayImage(src);
+		});
 		
 		singleImage.appendChild(overlayText);
 		singleImage.appendChild(img);
         divImages.appendChild(singleImage);
 	}
-
+	
 	//walksContent.appendChild(divDescription);
 	//walksContent.appendChild(divImages);
+}
+
+function displayImage(src) {
+	console.log(`displayImage ${src} called`);
+	const displayImageDiv = document.getElementById('image-viewer');
+	clearChildElements(displayImageDiv);
+	const image = addImg(src);
+	image.classList.add('border-style');
+	image.addEventListener('click', () => {
+		clearChildElements(displayImageDiv);
+	});
+
+	displayImageDiv.appendChild(image);
 }
 
 function addImg(src, alt) {

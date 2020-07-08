@@ -81,6 +81,8 @@ ul {
 	z-index: -100;
 }
 
+
+
 #banner {
     position: absolute;
     top: 30vh;
@@ -137,6 +139,17 @@ ul {
 	padding-bottom: 30px;;
 }
 
+/* all images that can be viewed are 1000px wide */
+
+#image-viewer {
+	position: absolute;
+	width: 80%;
+	height: auto;
+	left: calc((100% - 1000px)/2);
+	top: 2vh;
+	z-index: 250;
+}
+
 .top-bar {
 	width: 100%;
 	position: relative;
@@ -148,12 +161,12 @@ ul {
 }
 
 .walks-background {
-	background-image: url(images/mfdark.png);
 	width: 100%;
 	background-repeat: repeat;
     background-position: center;
     position: relative;
 	z-index: -100;
+	background-image: url(images/mfdark.png);	
 }
 
 #walks-content {

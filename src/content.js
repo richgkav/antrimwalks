@@ -5,7 +5,7 @@ import glenarmOffice from './images/glenarm-estate.jpg';
 import glenarmView1s from './images/glenarm-view1.jpg';
 import slemish from './images/slemish.jpg';
 import slemishSmall from './images/slemish-1.jpg';
-import lloydImage from './images/lloyd.jpg';
+import glenarmHills from './images/glenarm-hills.jpg';
 
 export const allWalks = [];
 
@@ -15,9 +15,9 @@ export function generateWalks() {
 	allWalks.push(
 		new ClDef.Walk('About Antrim Walks', slemishSmall, 'null description', walk0, 
 		[
-			lloydImage,
-			'Lloyd placeholder text',
-			'Temporary Image'
+			glenarmHills,
+			'Glenarm hills',
+			'Test view image'
 		])
 	);
 
@@ -48,9 +48,10 @@ export function generateWalks() {
 }
 
 const walk0 = `
-<h2>Some Description</h2>
-<h3>Sub heading</h3>
-<p>Click on the links on the left to display each walk description.</p>`;
+<h2>Welcome to Antrim Walks</h2>
+<h4>A collection of walks highlighting great views and places of interest.</h4>
+<p></p>
+`;
 
 const walk1 =`
 <h2>Glenarm 1</h2>
