@@ -29,7 +29,7 @@ export function allWalks() {
 		img.classList.add('border-style');
 
 		const walkSelectTitle = document.createElement('div');
-		walkSelectTitle.classList.add('walk-selector-title','small-text-shadow');
+		walkSelectTitle.classList.add('walk-selector-title');
 		walkSelectTitle.innerText = walkObject.title;
 
 		divWalkSelector.appendChild(walkSelectTitle);
@@ -77,7 +77,7 @@ export function oneWalk(index) {
 		img.classList.add('border-style');
 
 		const overlayText = document.createElement('div');
-		overlayText.classList.add('image-text','small-text-shadow');
+		overlayText.classList.add('image-text');
 		overlayText.innerText = walkObject.images[i + 2];
 
 		img.addEventListener('click', (event) => {
