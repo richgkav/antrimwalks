@@ -100,7 +100,7 @@ function displayImage(src) {
 	const displayImageDiv = document.getElementById('image-viewer');
 	clearChildElements(displayImageDiv);
 	const image = addImg(src);
-	image.classList.add('border-style');
+	image.classList.add('border-style','fade-image-in');
 	image.addEventListener('click', () => {
 		clearChildElements(displayImageDiv);
 	});

@@ -57,13 +57,21 @@ export function generateWalks() {
 
 const walk0 = `
 <h2>Welcome to Antrim Walks</h2>
-<p>County Antrim boasts a number of great places to visit many of which are 
-overlooked by the coaches of day visitors that travel up the Coast Road route. 
-Everyone knows about The Causway and The Dark Hedges, but what about an ancient 
-oak woodland untouched by the tree clearances? Or an unspoilt protected beach where 
-the carpark is far enough away that a lot of people are put off but you may 
-find cows enjoying the surf?</p>
-`;
+<p>County Antrim has a good selection of destinations to visit and walk. Locations 
+such as The Giants Causway and The Glens of Antrim are well known but here I will 
+show you some other places to see.</p>
+<p>The walks can be selected on the left and each one has photos to select on the
+ right. I have tried to provide a lot of information about the state of each walk
+  so that it's going to be easy to follow the route and also what kind of footwear
+ will make sense.</p>
+ <p>The Antrim Hills vary grately with ease of access and terrain 
+ but you will not go wrong with walking boots. Also I recommend a stick to test 
+ boggy areas for depth as you honestly cannot tell if you are about to step in 
+ 1 inch or 2 foot of water sometimes (and so I have had to walk in wet feet often).
+ Some hills boast a nice path all the way up while on others you'll be climbing 
+ through 5 foot peat hags (picture on the right). On the bright side however is 
+ that you'll often have the hills to yourself and hundreds of sheep, and the views
+  are extremely worth it.</p>`;
 
 const walk1 =`
 <h2>Glenarm Village and Straidkilly Nature Reserve</h2>
