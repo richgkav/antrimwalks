@@ -148,8 +148,6 @@ ul {
     top: 1vh;
     height: 80px;
     line-height: 80px;
-    /*color: var(--text-color);
-	text-shadow: var(--txt-shadow-medium);*/
 	overflow: hidden;
 }
 
@@ -219,10 +217,6 @@ ul {
 	height:	80px;
 }
 
-#the-walks-logo {
-	cursor: pointer;
-}
-
 .walks-background {
 	background-color: var(--col1);
 	width: 100%;
@@ -266,9 +260,12 @@ ul {
 	padding: 0 0 10px 0;
 }
 
+img {
+	cursor: pointer;
+}
+
 .walk-selector>img {
 	margin: 0 auto;
-	cursor: pointer;
 	z-index: 200;
 	width: 100%;
 	height: auto;

@@ -57,21 +57,12 @@ export function generateWalks() {
 
 const walk0 = `
 <h2>Welcome to Antrim Walks</h2>
-<p>County Antrim has a good selection of destinations to visit and walk. Locations 
-such as The Giants Causway and The Glens of Antrim are well known but here I will 
-show you some other places to see.</p>
-<p>The walks can be selected on the left and each one has photos to select on the
- right. I have tried to provide a lot of information about the state of each walk
-  so that it's going to be easy to follow the route and also what kind of footwear
- will make sense.</p>
- <p>The Antrim Hills vary grately with ease of access and terrain 
- but you will not go wrong with walking boots. Also I recommend a stick to test 
- boggy areas for depth as you honestly cannot tell if you are about to step in 
- 1 inch or 2 foot of water sometimes (and so I have had to walk in wet feet often).
- Some hills boast a nice path all the way up while on others you'll be climbing 
- through 5 foot peat hags (picture on the right). On the bright side however is 
- that you'll often have the hills to yourself and hundreds of sheep, and the views
-  are extremely worth it.</p>`;
+<p>County Antrim has a good selection of places to visit and here you can find 
+a collection of walks that are great to do when visiting each place.</p>
+<p>Select walks on the left and you can view photos from each walk on the right.
+I have provided information so that it's easy to follow the route and suggest 
+what footwear is needed.</p>
+<p></p>`;
 
 const walk1 =`
 <h2>Glenarm Village and Straidkilly Nature Reserve</h2>
@@ -97,7 +88,7 @@ usually a food van in the carpark. You can find toilets in the carpark.</p>
 
 <p>Starting from the car park take the eastern corner path by the playground and
  cross the footbridge to Eglington Yard. Bear left to follow the path until you 
- reach the marina office then walk by it heading for the road. Cross over and bear 
+ reach the marina office then alongside it heading for the road. Cross over and bear 
  left at the Glenarm tourist information car park.</p>
 
 <p>On the opposite side of the road there is a flowerbed area with an old tunnel and 
