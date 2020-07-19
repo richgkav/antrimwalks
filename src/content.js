@@ -3,55 +3,65 @@ import * as ClDef from './classes';
 import glenarmHarbour from './images/glenarm-harbour.jpg';
 import glenarmOffice from './images/glenarm-estate.jpg';
 import glenarmView1s from './images/glenarm-view1.jpg';
-import slemish from './images/slemish.jpg';
-import slemishSmall from './images/slemish-1.jpg';
-import glenarmHills from './images/glenarm-hills.jpg';
+import glenarmMap from './images/glenarm1-map.jpg';
+
+import carnloughMap from './images/carnlough1-map.jpg';
 
 export const allWalks = [];
 
 export function generateWalks() {
 	console.log('generateWalks called');
-	
+
+	/* format to create a new walk
 	allWalks.push(
-		new ClDef.Walk('About Antrim Walks', slemishSmall, 'null description', walk0, 
-		[
-			glenarmHills,
-			'Glenarm hills',
-			'Test view image'
-		])
+		new ClDef.Walk(
+			'walk title',
+			image-for-walk-selector,
+			'alt text for image',
+			walk-description-html-string,
+			[
+				image1,
+				'image 1 alt text',
+				'image 1 title',
+				// keep adding images
+			]
+		)
+	)
+
+
+	*/
+
+	allWalks.push(
+		new ClDef.Walk(
+			'Glenarm and Straidkilly',
+			glenarmView1s,
+			'A view of Glenarm fron a distance',
+			walk1,
+			[
+				glenarmMap,
+				'A map of the route around Glenarm',
+				'Map',
+				glenarmHarbour,
+				'Glenarm\'s small marina full of boats in the afternoon sun.',
+				'Glenarm marina',
+				glenarmOffice,
+				'Glenarm\'s estate office built 1739 and closed in the 1930s.',
+				'The old estate office'
+			])
 	);
 
-    allWalks.push(
+	allWalks.push(
 		new ClDef.Walk(
-			'Glenarm and Straidkilly', 
-			glenarmView1s, 
-			'A view of Glenarm fron a distance', 
-			walk1,
-		[
-            glenarmHarbour,
-			'Glenarm\'s small marina full of boats in the afternoon sun.',
-			'Glenarm marina',
-            glenarmOffice,
-			'Glenarm\'s estate office built 1739 and closed in the 1930s.',
-			'The old estate office'
-        ])
-    );
-
-    allWalks.push(
-		new ClDef.Walk(
-			'Another walk', 
-			glenarmView1s, 
+			'Carnlough Cranny Falls and Gortin Quarry',
+			glenarmView1s,
 			'test alt text for thumbnail image',
-			walk2, 
-		[
-			slemish, 
-			'alt text',
-			'title 1',
-			slemish,
-			'alt text',
-			'title 2'
-        ])
-    );
+			walk2,
+			[
+				carnloughMap,
+				'A map of the route around Carnlough',
+				'Map',
+			])
+	);
 
 }
 
@@ -64,7 +74,7 @@ I have provided information so that it's easy to follow the route and suggest
 what footwear is needed.</p>
 <p></p>`;
 
-const walk1 =`
+const walk1 = `
 <h2>Glenarm Village and Straidkilly Nature Reserve</h2>
 
 <p>This is a circular walk from the harbour area up to the Layde Walk, to 
@@ -82,7 +92,7 @@ seafront and there is further parking around the village. There are buses from L
 
 <h4>Amenities</h4>
 <p>Glenarm has two pubs (conveniently next to each other), a shop and there is 
-usually a food van in the carpark. You can find toilets in the carpark.</p>
+usually a food van in the carpark. There are also toilets in the carpark.</p>
 
 <h4>Directions</h4>
 
@@ -141,10 +151,12 @@ point in the carpark.</p>
 `;
 
 const walk2 =
-    `<h2>TEST Walk 2</h2>
-<h3>test heading 2</h3>
-<p>bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
-bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
-bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
-bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
-bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p>`;
+`<h2>Carnlough Cranny Falls and Gortin Quarry</h2>
+<p>intro</p>
+<h4>Parking and public transport</h4>
+<p></p>
+<h4>Amenities</h4>
+<p></p>
+<h4>Directions</h4>
+<p></p>
+`;

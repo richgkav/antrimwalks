@@ -5,10 +5,6 @@ export function allWalks() {
 	console.log('allWalks() called');
 	const divAllWalks = document.getElementById('all-walks');
 	clearChildElements(divAllWalks);
-	// Get array containing all the Walk objects
-
-	//const divWalkSelector = document.getElementById('walk-selector');
-
 	const arrayAllWalks = Content.allWalks;
 
 	for (let i = 0; i != arrayAllWalks.length; i++) {
@@ -38,21 +34,13 @@ export function allWalks() {
 		divAllWalks.appendChild(divWalkSelector);
 	}
 
-	// clicking All Walks calls this function. note to self the arrow function
-	// is needed so that this refers to the scope the arrow was called in
-	const theWalksLogo = document.getElementById('the-walks-logo');
-	theWalksLogo.addEventListener('click', () => {
-		this.allWalks();
-	});
-
-	// render the first walk
-	oneWalk(0);
 }
 
 
 export function oneWalk(index) {
 	console.log(`oneWalk(${index}) called`);
 	
+	document.getElementById('walk-div').style.display = 'grid';
 	const divDescription = document.getElementById('walk-description');
 	const divImages = document.getElementById('all-walk-images');
 
@@ -88,11 +76,9 @@ export function oneWalk(index) {
 		
 		singleImage.appendChild(overlayText);
 		singleImage.appendChild(img);
-        divImages.appendChild(singleImage);
+    divImages.appendChild(singleImage);
 	}
-	
-	//walksContent.appendChild(divDescription);
-	//walksContent.appendChild(divImages);
+
 }
 
 function displayImage(src) {

@@ -11,10 +11,13 @@ export class Walk {
     }
 }
 
+/*
 export class Location {
     constructor(title, thumbnail, thumbalt, description) {
         this.title = title;
         this.thumbnail = thumbnail;
+        this.thumbalt = thumbalt;
         this.description = description;
     }
 }
+*/
