@@ -178,6 +178,31 @@ ul {
 	padding-bottom: 30px;
 }
 
+/* ------------- */
+
+.custom-shape-divider-bottom-1595189418 {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	overflow: hidden;
+	line-height: 0;
+	transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1595189418 svg {
+	position: relative;
+	display: block;
+	width: calc(200% + 1.3px);
+	height: 62px;
+}
+
+.custom-shape-divider-bottom-1595189418 .shape-fill {
+	fill: #FFFFFF;
+}
+
+/* ------------- */
+
 /* all images that can be viewed are 1000px wide */
 
 #image-viewer {
